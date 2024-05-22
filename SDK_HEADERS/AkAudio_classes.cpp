@@ -12,7 +12,7 @@
 #include "../SdkHeaders.hpp"
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
 /*
@@ -27,12 +27,10 @@
 // struct FName                   BusName                        (CPF_Parm)
 // EBusEmitterType                BusType                        (CPF_Parm)
 
-void AAkBusActor::RegisterReflectionEmitter(struct FName BusName, EBusEmitterType BusType)
-{
+void AAkBusActor::RegisterReflectionEmitter(struct FName BusName, EBusEmitterType BusType){
 	static UFunction* uFnRegisterReflectionEmitter = nullptr;
 
-	if (!uFnRegisterReflectionEmitter)
-	{
+	if (!uFnRegisterReflectionEmitter){
 		uFnRegisterReflectionEmitter = UFunction::FindFunction("Function AkAudio.AkBusActor.RegisterReflectionEmitter");
 	}
 
@@ -51,12 +49,10 @@ void AAkBusActor::RegisterReflectionEmitter(struct FName BusName, EBusEmitterTyp
 // Parameter Info:
 // EPinnedAxisType                AxisToPin                      (CPF_Parm)
 
-void AAkBusActor::SetPinnedAxis(EPinnedAxisType AxisToPin)
-{
+void AAkBusActor::SetPinnedAxis(EPinnedAxisType AxisToPin){
 	static UFunction* uFnSetPinnedAxis = nullptr;
 
-	if (!uFnSetPinnedAxis)
-	{
+	if (!uFnSetPinnedAxis){
 		uFnSetPinnedAxis = UFunction::FindFunction("Function AkAudio.AkBusActor.SetPinnedAxis");
 	}
 
@@ -76,12 +72,10 @@ void AAkBusActor::SetPinnedAxis(EPinnedAxisType AxisToPin)
 // struct FName                   EffectSetting                  (CPF_Parm)
 // int32_t                        EffectSlot                     (CPF_OptionalParm | CPF_Parm)
 
-void UAkDevice::SetBusEffect(struct FName BusName, struct FName EffectSetting, int32_t EffectSlot)
-{
+void UAkDevice::SetBusEffect(struct FName BusName, struct FName EffectSetting, int32_t EffectSlot){
 	static UFunction* uFnSetBusEffect = nullptr;
 
-	if (!uFnSetBusEffect)
-	{
+	if (!uFnSetBusEffect){
 		uFnSetBusEffect = UFunction::FindFunction("Function AkAudio.AkDevice.SetBusEffect");
 	}
 
@@ -100,12 +94,10 @@ void UAkDevice::SetBusEffect(struct FName BusName, struct FName EffectSetting, i
 // [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkDevice::ResetSlapbackObjects()
-{
+void UAkDevice::ResetSlapbackObjects(){
 	static UFunction* uFnResetSlapbackObjects = nullptr;
 
-	if (!uFnResetSlapbackObjects)
-	{
+	if (!uFnResetSlapbackObjects){
 		uFnResetSlapbackObjects = UFunction::FindFunction("Function AkAudio.AkDevice.ResetSlapbackObjects");
 	}
 
@@ -123,12 +115,10 @@ void UAkDevice::ResetSlapbackObjects()
 // class AActor*                  Actor                          (CPF_Parm)
 // EAkEnvironmentType             EnvironmentType                (CPF_Parm)
 
-void UAkDevice::SetSoundEnvironment(class AActor* Actor, EAkEnvironmentType EnvironmentType)
-{
+void UAkDevice::SetSoundEnvironment(class AActor* Actor, EAkEnvironmentType EnvironmentType){
 	static UFunction* uFnSetSoundEnvironment = nullptr;
 
-	if (!uFnSetSoundEnvironment)
-	{
+	if (!uFnSetSoundEnvironment){
 		uFnSetSoundEnvironment = UFunction::FindFunction("Function AkAudio.AkDevice.SetSoundEnvironment");
 	}
 
@@ -147,12 +137,10 @@ void UAkDevice::SetSoundEnvironment(class AActor* Actor, EAkEnvironmentType Envi
 // Parameter Info:
 // class UAkEnvironments*         ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
-class UAkEnvironments* UAkDevice::GetEnvironments()
-{
+class UAkEnvironments* UAkDevice::GetEnvironments(){
 	static UFunction* uFnGetEnvironments = nullptr;
 
-	if (!uFnGetEnvironments)
-	{
+	if (!uFnGetEnvironments){
 		uFnGetEnvironments = UFunction::FindFunction("Function AkAudio.AkDevice.GetEnvironments");
 	}
 
@@ -171,12 +159,10 @@ class UAkEnvironments* UAkDevice::GetEnvironments()
 // Parameter Info:
 // struct FScriptDelegate         Callback                       (CPF_Parm | CPF_NeedCtorLink)
 
-void UAkDevice::NotifyWhenInitialized(struct FScriptDelegate Callback)
-{
+void UAkDevice::NotifyWhenInitialized(struct FScriptDelegate Callback){
 	static UFunction* uFnNotifyWhenInitialized = nullptr;
 
-	if (!uFnNotifyWhenInitialized)
-	{
+	if (!uFnNotifyWhenInitialized){
 		uFnNotifyWhenInitialized = UFunction::FindFunction("Function AkAudio.AkDevice.NotifyWhenInitialized");
 	}
 
@@ -193,12 +179,10 @@ void UAkDevice::NotifyWhenInitialized(struct FScriptDelegate Callback)
 // [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkDevice::ProfileStop()
-{
+void UAkDevice::ProfileStop(){
 	static UFunction* uFnProfileStop = nullptr;
 
-	if (!uFnProfileStop)
-	{
+	if (!uFnProfileStop){
 		uFnProfileStop = UFunction::FindFunction("Function AkAudio.AkDevice.ProfileStop");
 	}
 
@@ -214,12 +198,10 @@ void UAkDevice::ProfileStop()
 // [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkDevice::ProfileStart()
-{
+void UAkDevice::ProfileStart(){
 	static UFunction* uFnProfileStart = nullptr;
 
-	if (!uFnProfileStart)
-	{
+	if (!uFnProfileStart){
 		uFnProfileStart = UFunction::FindFunction("Function AkAudio.AkDevice.ProfileStart");
 	}
 
@@ -235,12 +217,10 @@ void UAkDevice::ProfileStart()
 // [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkDevice::PrintData()
-{
+void UAkDevice::PrintData(){
 	static UFunction* uFnPrintData = nullptr;
 
-	if (!uFnPrintData)
-	{
+	if (!uFnPrintData){
 		uFnPrintData = UFunction::FindFunction("Function AkAudio.AkDevice.PrintData");
 	}
 
@@ -257,12 +237,10 @@ void UAkDevice::PrintData()
 // Parameter Info:
 // EAkDynamicRangeType            Type                           (CPF_Parm)
 
-void UAkDevice::SetDynamicRange(EAkDynamicRangeType Type)
-{
+void UAkDevice::SetDynamicRange(EAkDynamicRangeType Type){
 	static UFunction* uFnSetDynamicRange = nullptr;
 
-	if (!uFnSetDynamicRange)
-	{
+	if (!uFnSetDynamicRange){
 		uFnSetDynamicRange = UFunction::FindFunction("Function AkAudio.AkDevice.SetDynamicRange");
 	}
 
@@ -280,12 +258,10 @@ void UAkDevice::SetDynamicRange(EAkDynamicRangeType Type)
 // Parameter Info:
 // EAkOutputType                  Type                           (CPF_Parm)
 
-void UAkDevice::SetOutputType(EAkOutputType Type)
-{
+void UAkDevice::SetOutputType(EAkOutputType Type){
 	static UFunction* uFnSetOutputType = nullptr;
 
-	if (!uFnSetOutputType)
-	{
+	if (!uFnSetOutputType){
 		uFnSetOutputType = UFunction::FindFunction("Function AkAudio.AkDevice.SetOutputType");
 	}
 
@@ -304,12 +280,10 @@ void UAkDevice::SetOutputType(EAkOutputType Type)
 // class ULocalPlayer*            Player                         (CPF_Parm)
 // EAkListenerSpacialization      Value                          (CPF_Parm)
 
-void UAkDevice::SetListenerSpatialization(class ULocalPlayer* Player, EAkListenerSpacialization Value)
-{
+void UAkDevice::SetListenerSpatialization(class ULocalPlayer* Player, EAkListenerSpacialization Value){
 	static UFunction* uFnSetListenerSpatialization = nullptr;
 
-	if (!uFnSetListenerSpatialization)
-	{
+	if (!uFnSetListenerSpatialization){
 		uFnSetListenerSpatialization = UFunction::FindFunction("Function AkAudio.AkDevice.SetListenerSpatialization");
 	}
 
@@ -328,12 +302,10 @@ void UAkDevice::SetListenerSpatialization(class ULocalPlayer* Player, EAkListene
 // Parameter Info:
 // bool                           bEnable                        (CPF_Parm)
 
-void UAkDevice::SetSplitScreenListenerEnabled(bool bEnable)
-{
+void UAkDevice::SetSplitScreenListenerEnabled(bool bEnable){
 	static UFunction* uFnSetSplitScreenListenerEnabled = nullptr;
 
-	if (!uFnSetSplitScreenListenerEnabled)
-	{
+	if (!uFnSetSplitScreenListenerEnabled){
 		uFnSetSplitScreenListenerEnabled = UFunction::FindFunction("Function AkAudio.AkDevice.SetSplitScreenListenerEnabled");
 	}
 
@@ -351,12 +323,10 @@ void UAkDevice::SetSplitScreenListenerEnabled(bool bEnable)
 // Parameter Info:
 // struct FVector                 Location                       (CPF_Parm)
 
-void UAkDevice::SetSplitScreenListenerPosition(struct FVector Location)
-{
+void UAkDevice::SetSplitScreenListenerPosition(struct FVector Location){
 	static UFunction* uFnSetSplitScreenListenerPosition = nullptr;
 
-	if (!uFnSetSplitScreenListenerPosition)
-	{
+	if (!uFnSetSplitScreenListenerPosition){
 		uFnSetSplitScreenListenerPosition = UFunction::FindFunction("Function AkAudio.AkDevice.SetSplitScreenListenerPosition");
 	}
 
@@ -373,12 +343,10 @@ void UAkDevice::SetSplitScreenListenerPosition(struct FVector Location)
 // [0x04022401] (FUNC_Final | FUNC_Native | FUNC_Static | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkDevice::UpdateSecondaryOutputs()
-{
+void UAkDevice::UpdateSecondaryOutputs(){
 	static UFunction* uFnUpdateSecondaryOutputs = nullptr;
 
-	if (!uFnUpdateSecondaryOutputs)
-	{
+	if (!uFnUpdateSecondaryOutputs){
 		uFnUpdateSecondaryOutputs = UFunction::FindFunction("Function AkAudio.AkDevice.UpdateSecondaryOutputs");
 	}
 
@@ -396,12 +364,10 @@ void UAkDevice::UpdateSecondaryOutputs()
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
 
-void UAkDevice::SetGlobalRTCP(struct FName Key, float Value)
-{
+void UAkDevice::SetGlobalRTCP(struct FName Key, float Value){
 	static UFunction* uFnSetGlobalRTCP = nullptr;
 
-	if (!uFnSetGlobalRTCP)
-	{
+	if (!uFnSetGlobalRTCP){
 		uFnSetGlobalRTCP = UFunction::FindFunction("Function AkAudio.AkDevice.SetGlobalRTCP");
 	}
 
@@ -420,12 +386,10 @@ void UAkDevice::SetGlobalRTCP(struct FName Key, float Value)
 // Parameter Info:
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-void UAkDevice::StopGlobalSound(class UAkSoundCue* Sound)
-{
+void UAkDevice::StopGlobalSound(class UAkSoundCue* Sound){
 	static UFunction* uFnStopGlobalSound = nullptr;
 
-	if (!uFnStopGlobalSound)
-	{
+	if (!uFnStopGlobalSound){
 		uFnStopGlobalSound = UFunction::FindFunction("Function AkAudio.AkDevice.StopGlobalSound");
 	}
 
@@ -443,12 +407,10 @@ void UAkDevice::StopGlobalSound(class UAkSoundCue* Sound)
 // Parameter Info:
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-void UAkDevice::PlayGlobalSound(class UAkSoundCue* Sound)
-{
+void UAkDevice::PlayGlobalSound(class UAkSoundCue* Sound){
 	static UFunction* uFnPlayGlobalSound = nullptr;
 
-	if (!uFnPlayGlobalSound)
-	{
+	if (!uFnPlayGlobalSound){
 		uFnPlayGlobalSound = UFunction::FindFunction("Function AkAudio.AkDevice.PlayGlobalSound");
 	}
 
@@ -467,12 +429,10 @@ void UAkDevice::PlayGlobalSound(class UAkSoundCue* Sound)
 // struct FName                   InStateGroup                   (CPF_Parm)
 // struct FName                   InState                        (CPF_Parm)
 
-void UAkDevice::SetState(struct FName InStateGroup, struct FName InState)
-{
+void UAkDevice::SetState(struct FName InStateGroup, struct FName InState){
 	static UFunction* uFnSetState = nullptr;
 
-	if (!uFnSetState)
-	{
+	if (!uFnSetState){
 		uFnSetState = UFunction::FindFunction("Function AkAudio.AkDevice.SetState");
 	}
 
@@ -493,12 +453,10 @@ void UAkDevice::SetState(struct FName InStateGroup, struct FName InState)
 // struct FName                   Key                            (CPF_Parm)
 // struct FName                   Value                          (CPF_Parm)
 
-void UAkDevice::SetSwitch(class AActor* SourceActor, struct FName Key, struct FName Value)
-{
+void UAkDevice::SetSwitch(class AActor* SourceActor, struct FName Key, struct FName Value){
 	static UFunction* uFnSetSwitch = nullptr;
 
-	if (!uFnSetSwitch)
-	{
+	if (!uFnSetSwitch){
 		uFnSetSwitch = UFunction::FindFunction("Function AkAudio.AkDevice.SetSwitch");
 	}
 
@@ -520,12 +478,10 @@ void UAkDevice::SetSwitch(class AActor* SourceActor, struct FName Key, struct FN
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
 
-void UAkDevice::SetRTCP(class AActor* SourceActor, struct FName Key, float Value)
-{
+void UAkDevice::SetRTCP(class AActor* SourceActor, struct FName Key, float Value){
 	static UFunction* uFnSetRTCP = nullptr;
 
-	if (!uFnSetRTCP)
-	{
+	if (!uFnSetRTCP){
 		uFnSetRTCP = UFunction::FindFunction("Function AkAudio.AkDevice.SetRTCP");
 	}
 
@@ -545,12 +501,10 @@ void UAkDevice::SetRTCP(class AActor* SourceActor, struct FName Key, float Value
 // Parameter Info:
 // class AActor*                  SourceActor                    (CPF_Parm)
 
-void UAkDevice::StopAllSounds(class AActor* SourceActor)
-{
+void UAkDevice::StopAllSounds(class AActor* SourceActor){
 	static UFunction* uFnStopAllSounds = nullptr;
 
-	if (!uFnStopAllSounds)
-	{
+	if (!uFnStopAllSounds){
 		uFnStopAllSounds = UFunction::FindFunction("Function AkAudio.AkDevice.StopAllSounds");
 	}
 
@@ -569,12 +523,10 @@ void UAkDevice::StopAllSounds(class AActor* SourceActor)
 // class AActor*                  SourceActor                    (CPF_Parm)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-void UAkDevice::StopSound(class AActor* SourceActor, class UAkSoundCue* Sound)
-{
+void UAkDevice::StopSound(class AActor* SourceActor, class UAkSoundCue* Sound){
 	static UFunction* uFnStopSound = nullptr;
 
-	if (!uFnStopSound)
-	{
+	if (!uFnStopSound){
 		uFnStopSound = UFunction::FindFunction("Function AkAudio.AkDevice.StopSound");
 	}
 
@@ -597,12 +549,10 @@ void UAkDevice::StopSound(class AActor* SourceActor, class UAkSoundCue* Sound)
 // struct FVector                 Translation                    (CPF_OptionalParm | CPF_Parm)
 // struct FRotator                Rotation                       (CPF_OptionalParm | CPF_Parm)
 
-class UAkSoundSource* UAkDevice::PlaySound(class AActor* SourceActor, class UAkSoundCue* Sound, struct FVector Translation, struct FRotator Rotation)
-{
+class UAkSoundSource* UAkDevice::PlaySound(class AActor* SourceActor, class UAkSoundCue* Sound, struct FVector Translation, struct FRotator Rotation){
 	static UFunction* uFnPlaySound = nullptr;
 
-	if (!uFnPlaySound)
-	{
+	if (!uFnPlaySound){
 		uFnPlaySound = UFunction::FindFunction("Function AkAudio.AkDevice.PlaySound");
 	}
 
@@ -628,12 +578,10 @@ class UAkSoundSource* UAkDevice::PlaySound(class AActor* SourceActor, class UAkS
 // struct FVector                 Translation                    (CPF_OptionalParm | CPF_Parm)
 // struct FRotator                Rotation                       (CPF_OptionalParm | CPF_Parm)
 
-class UAkSoundSource* UAkDevice::GetSoundSource(class AActor* SourceActor, struct FVector Translation, struct FRotator Rotation)
-{
+class UAkSoundSource* UAkDevice::GetSoundSource(class AActor* SourceActor, struct FVector Translation, struct FRotator Rotation){
 	static UFunction* uFnGetSoundSource = nullptr;
 
-	if (!uFnGetSoundSource)
-	{
+	if (!uFnGetSoundSource){
 		uFnGetSoundSource = UFunction::FindFunction("Function AkAudio.AkDevice.GetSoundSource");
 	}
 
@@ -654,12 +602,10 @@ class UAkSoundSource* UAkDevice::GetSoundSource(class AActor* SourceActor, struc
 // [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkDevice::EventInitialized()
-{
+void UAkDevice::EventInitialized(){
 	static UFunction* uFnEventInitialized = nullptr;
 
-	if (!uFnEventInitialized)
-	{
+	if (!uFnEventInitialized){
 		uFnEventInitialized = UFunction::FindFunction("Function AkAudio.AkDevice.EventInitialized");
 	}
 
@@ -675,12 +621,10 @@ void UAkDevice::EventInitialized()
 // class AActor*                  TargetActor                    (CPF_Parm)
 // class FString                  EnvironmentID                  (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-void UAkEnvironments::RemoveActorEnvironment(class AActor* TargetActor, class FString& EnvironmentID)
-{
+void UAkEnvironments::RemoveActorEnvironment(class AActor* TargetActor, class FString& EnvironmentID){
 	static UFunction* uFnRemoveActorEnvironment = nullptr;
 
-	if (!uFnRemoveActorEnvironment)
-	{
+	if (!uFnRemoveActorEnvironment){
 		uFnRemoveActorEnvironment = UFunction::FindFunction("Function AkAudio.AkEnvironments.RemoveActorEnvironment");
 	}
 
@@ -702,12 +646,10 @@ void UAkEnvironments::RemoveActorEnvironment(class AActor* TargetActor, class FS
 // class AActor*                  TargetActor                    (CPF_Parm)
 // struct FAkEnvironment          Environment                    (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-void UAkEnvironments::AddActorEnvironment(class AActor* TargetActor, struct FAkEnvironment& Environment)
-{
+void UAkEnvironments::AddActorEnvironment(class AActor* TargetActor, struct FAkEnvironment& Environment){
 	static UFunction* uFnAddActorEnvironment = nullptr;
 
-	if (!uFnAddActorEnvironment)
-	{
+	if (!uFnAddActorEnvironment){
 		uFnAddActorEnvironment = UFunction::FindFunction("Function AkAudio.AkEnvironments.AddActorEnvironment");
 	}
 
@@ -728,12 +670,10 @@ void UAkEnvironments::AddActorEnvironment(class AActor* TargetActor, struct FAkE
 // Parameter Info:
 // struct FAkEnvironment          Environment                    (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-void UAkEnvironments::AddLevelDefault(struct FAkEnvironment& Environment)
-{
+void UAkEnvironments::AddLevelDefault(struct FAkEnvironment& Environment){
 	static UFunction* uFnAddLevelDefault = nullptr;
 
-	if (!uFnAddLevelDefault)
-	{
+	if (!uFnAddLevelDefault){
 		uFnAddLevelDefault = UFunction::FindFunction("Function AkAudio.AkEnvironments.AddLevelDefault");
 	}
 
@@ -753,12 +693,10 @@ void UAkEnvironments::AddLevelDefault(struct FAkEnvironment& Environment)
 // Parameter Info:
 // float                          DeltaTime                      (CPF_Const | CPF_Parm)
 
-void UAkMusicAnalysis::UpdateSmoothedMusicInfo(float DeltaTime)
-{
+void UAkMusicAnalysis::UpdateSmoothedMusicInfo(float DeltaTime){
 	static UFunction* uFnUpdateSmoothedMusicInfo = nullptr;
 
-	if (!uFnUpdateSmoothedMusicInfo)
-	{
+	if (!uFnUpdateSmoothedMusicInfo){
 		uFnUpdateSmoothedMusicInfo = UFunction::FindFunction("Function AkAudio.AkMusicAnalysis.UpdateSmoothedMusicInfo");
 	}
 
@@ -776,12 +714,10 @@ void UAkMusicAnalysis::UpdateSmoothedMusicInfo(float DeltaTime)
 // Parameter Info:
 // struct FMusicAnalysisInfo      NewValues                      (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-void UAkMusicAnalysis::UpdateMusicInfo(struct FMusicAnalysisInfo& NewValues)
-{
+void UAkMusicAnalysis::UpdateMusicInfo(struct FMusicAnalysisInfo& NewValues){
 	static UFunction* uFnUpdateMusicInfo = nullptr;
 
-	if (!uFnUpdateMusicInfo)
-	{
+	if (!uFnUpdateMusicInfo){
 		uFnUpdateMusicInfo = UFunction::FindFunction("Function AkAudio.AkMusicAnalysis.UpdateMusicInfo");
 	}
 
@@ -801,12 +737,10 @@ void UAkMusicAnalysis::UpdateMusicInfo(struct FMusicAnalysisInfo& NewValues)
 // Parameter Info:
 // int32_t                        NewBPM                         (CPF_Parm)
 
-void UAkMusicAnalysis::OnNewTrack(int32_t NewBPM)
-{
+void UAkMusicAnalysis::OnNewTrack(int32_t NewBPM){
 	static UFunction* uFnOnNewTrack = nullptr;
 
-	if (!uFnOnNewTrack)
-	{
+	if (!uFnOnNewTrack){
 		uFnOnNewTrack = UFunction::FindFunction("Function AkAudio.AkMusicAnalysis.OnNewTrack");
 	}
 
@@ -824,12 +758,10 @@ void UAkMusicAnalysis::OnNewTrack(int32_t NewBPM)
 // Parameter Info:
 // class UAkMusicAnalysis*        ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
-class UAkMusicAnalysis* UAkMusicAnalysis::GetInstance()
-{
+class UAkMusicAnalysis* UAkMusicAnalysis::GetInstance(){
 	static UFunction* uFnGetInstance = nullptr;
 
-	if (!uFnGetInstance)
-	{
+	if (!uFnGetInstance){
 		uFnGetInstance = UFunction::FindFunction("Function AkAudio.AkMusicAnalysis.GetInstance");
 	}
 
@@ -847,12 +779,10 @@ class UAkMusicAnalysis* UAkMusicAnalysis::GetInstance()
 // [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkMusicAnalysis::EventMusicBar()
-{
+void UAkMusicAnalysis::EventMusicBar(){
 	static UFunction* uFnEventMusicBar = nullptr;
 
-	if (!uFnEventMusicBar)
-	{
+	if (!uFnEventMusicBar){
 		uFnEventMusicBar = UFunction::FindFunction("Function AkAudio.AkMusicAnalysis.EventMusicBar");
 	}
 
@@ -866,12 +796,10 @@ void UAkMusicAnalysis::EventMusicBar()
 // [0x00120001] (FUNC_Final | FUNC_Public | FUNC_Delegate | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkMusicAnalysis::EventMusicBeat()
-{
+void UAkMusicAnalysis::EventMusicBeat(){
 	static UFunction* uFnEventMusicBeat = nullptr;
 
-	if (!uFnEventMusicBeat)
-	{
+	if (!uFnEventMusicBeat){
 		uFnEventMusicBeat = UFunction::FindFunction("Function AkAudio.AkMusicAnalysis.EventMusicBeat");
 	}
 
@@ -887,12 +815,10 @@ void UAkMusicAnalysis::EventMusicBeat()
 // int32_t                        PlayingID                      (CPF_Parm)
 // int32_t                        NewBPM                         (CPF_Parm)
 
-void UAkMusicAnalysis::EventNewMusicTrack(int32_t PlayingID, int32_t NewBPM)
-{
+void UAkMusicAnalysis::EventNewMusicTrack(int32_t PlayingID, int32_t NewBPM){
 	static UFunction* uFnEventNewMusicTrack = nullptr;
 
-	if (!uFnEventNewMusicTrack)
-	{
+	if (!uFnEventNewMusicTrack){
 		uFnEventNewMusicTrack = UFunction::FindFunction("Function AkAudio.AkMusicAnalysis.EventNewMusicTrack");
 	}
 
@@ -910,12 +836,10 @@ void UAkMusicAnalysis::EventNewMusicTrack(int32_t PlayingID, int32_t NewBPM)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 // float                          PositionSeconds                (CPF_Parm)
 
-void UAkMusicDevice::Seek(class UAkSoundCue* Sound, float PositionSeconds)
-{
+void UAkMusicDevice::Seek(class UAkSoundCue* Sound, float PositionSeconds){
 	static UFunction* uFnSeek = nullptr;
 
-	if (!uFnSeek)
-	{
+	if (!uFnSeek){
 		uFnSeek = UFunction::FindFunction("Function AkAudio.AkMusicDevice.Seek");
 	}
 
@@ -935,12 +859,10 @@ void UAkMusicDevice::Seek(class UAkSoundCue* Sound, float PositionSeconds)
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
 
-void UAkMusicDevice::SetRTCP(struct FName Key, float Value)
-{
+void UAkMusicDevice::SetRTCP(struct FName Key, float Value){
 	static UFunction* uFnSetRTCP = nullptr;
 
-	if (!uFnSetRTCP)
-	{
+	if (!uFnSetRTCP){
 		uFnSetRTCP = UFunction::FindFunction("Function AkAudio.AkMusicDevice.SetRTCP");
 	}
 
@@ -959,12 +881,10 @@ void UAkMusicDevice::SetRTCP(struct FName Key, float Value)
 // Parameter Info:
 // int32_t                        PlayingID                      (CPF_Parm)
 
-void UAkMusicDevice::StopPlayingID(int32_t PlayingID)
-{
+void UAkMusicDevice::StopPlayingID(int32_t PlayingID){
 	static UFunction* uFnStopPlayingID = nullptr;
 
-	if (!uFnStopPlayingID)
-	{
+	if (!uFnStopPlayingID){
 		uFnStopPlayingID = UFunction::FindFunction("Function AkAudio.AkMusicDevice.StopPlayingID");
 	}
 
@@ -982,12 +902,10 @@ void UAkMusicDevice::StopPlayingID(int32_t PlayingID)
 // Parameter Info:
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-void UAkMusicDevice::Stop(class UAkSoundCue* Sound)
-{
+void UAkMusicDevice::Stop(class UAkSoundCue* Sound){
 	static UFunction* uFnStop = nullptr;
 
-	if (!uFnStop)
-	{
+	if (!uFnStop){
 		uFnStop = UFunction::FindFunction("Function AkAudio.AkMusicDevice.Stop");
 	}
 
@@ -1006,12 +924,10 @@ void UAkMusicDevice::Stop(class UAkSoundCue* Sound)
 // int32_t                        ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-int32_t UAkMusicDevice::Play(class UAkSoundCue* Sound)
-{
+int32_t UAkMusicDevice::Play(class UAkSoundCue* Sound){
 	static UFunction* uFnPlay = nullptr;
 
-	if (!uFnPlay)
-	{
+	if (!uFnPlay){
 		uFnPlay = UFunction::FindFunction("Function AkAudio.AkMusicDevice.Play");
 	}
 
@@ -1031,12 +947,10 @@ int32_t UAkMusicDevice::Play(class UAkSoundCue* Sound)
 // Parameter Info:
 // int32_t                        PlayingID                      (CPF_Parm)
 
-void UAkMusicDevice::EventTrackEnd(int32_t PlayingID)
-{
+void UAkMusicDevice::EventTrackEnd(int32_t PlayingID){
 	static UFunction* uFnEventTrackEnd = nullptr;
 
-	if (!uFnEventTrackEnd)
-	{
+	if (!uFnEventTrackEnd){
 		uFnEventTrackEnd = UFunction::FindFunction("Function AkAudio.AkMusicDevice.EventTrackEnd");
 	}
 
@@ -1053,12 +967,10 @@ void UAkMusicDevice::EventTrackEnd(int32_t PlayingID)
 // int32_t                        PlayingID                      (CPF_Parm)
 // class FString                  FileMarker                     (CPF_Parm | CPF_NeedCtorLink)
 
-void UAkMusicDevice::EventTrackStart(int32_t PlayingID, class FString FileMarker)
-{
+void UAkMusicDevice::EventTrackStart(int32_t PlayingID, class FString FileMarker){
 	static UFunction* uFnEventTrackStart = nullptr;
 
-	if (!uFnEventTrackStart)
-	{
+	if (!uFnEventTrackStart){
 		uFnEventTrackStart = UFunction::FindFunction("Function AkAudio.AkMusicDevice.EventTrackStart");
 	}
 
@@ -1075,12 +987,10 @@ void UAkMusicDevice::EventTrackStart(int32_t PlayingID, class FString FileMarker
 // Parameter Info:
 // bool                           bSend                          (CPF_Parm)
 
-void UAkParamGroup::SetSendToSlapbacks(bool bSend)
-{
+void UAkParamGroup::SetSendToSlapbacks(bool bSend){
 	static UFunction* uFnSetSendToSlapbacks = nullptr;
 
-	if (!uFnSetSendToSlapbacks)
-	{
+	if (!uFnSetSendToSlapbacks){
 		uFnSetSendToSlapbacks = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetSendToSlapbacks");
 	}
 
@@ -1096,12 +1006,10 @@ void UAkParamGroup::SetSendToSlapbacks(bool bSend)
 // Parameter Info:
 // int32_t                        InID                           (CPF_Parm)
 
-void UAkParamGroup::SetControllerId(int32_t InID)
-{
+void UAkParamGroup::SetControllerId(int32_t InID){
 	static UFunction* uFnSetControllerId = nullptr;
 
-	if (!uFnSetControllerId)
-	{
+	if (!uFnSetControllerId){
 		uFnSetControllerId = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetControllerId");
 	}
 
@@ -1116,12 +1024,10 @@ void UAkParamGroup::SetControllerId(int32_t InID)
 // [0x00020003] (FUNC_Final | FUNC_Defined | FUNC_Public | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkParamGroup::EnableObjectAttenuation()
-{
+void UAkParamGroup::EnableObjectAttenuation(){
 	static UFunction* uFnEnableObjectAttenuation = nullptr;
 
-	if (!uFnEnableObjectAttenuation)
-	{
+	if (!uFnEnableObjectAttenuation){
 		uFnEnableObjectAttenuation = UFunction::FindFunction("Function AkAudio.AkParamGroup.EnableObjectAttenuation");
 	}
 
@@ -1135,12 +1041,10 @@ void UAkParamGroup::EnableObjectAttenuation()
 // [0x00020003] (FUNC_Final | FUNC_Defined | FUNC_Public | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkParamGroup::DisableObjectAttenuation()
-{
+void UAkParamGroup::DisableObjectAttenuation(){
 	static UFunction* uFnDisableObjectAttenuation = nullptr;
 
-	if (!uFnDisableObjectAttenuation)
-	{
+	if (!uFnDisableObjectAttenuation){
 		uFnDisableObjectAttenuation = UFunction::FindFunction("Function AkAudio.AkParamGroup.DisableObjectAttenuation");
 	}
 
@@ -1155,12 +1059,10 @@ void UAkParamGroup::DisableObjectAttenuation()
 // Parameter Info:
 // class UDebugDrawer*            Drawer                         (CPF_Parm)
 
-void UAkParamGroup::PrintDebugInfo(class UDebugDrawer* Drawer)
-{
+void UAkParamGroup::PrintDebugInfo(class UDebugDrawer* Drawer){
 	static UFunction* uFnPrintDebugInfo = nullptr;
 
-	if (!uFnPrintDebugInfo)
-	{
+	if (!uFnPrintDebugInfo){
 		uFnPrintDebugInfo = UFunction::FindFunction("Function AkAudio.AkParamGroup.PrintDebugInfo");
 	}
 
@@ -1175,12 +1077,10 @@ void UAkParamGroup::PrintDebugInfo(class UDebugDrawer* Drawer)
 // [0x04020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkParamGroup::UpdateSoundSourceAttenuationScaling()
-{
+void UAkParamGroup::UpdateSoundSourceAttenuationScaling(){
 	static UFunction* uFnUpdateSoundSourceAttenuationScaling = nullptr;
 
-	if (!uFnUpdateSoundSourceAttenuationScaling)
-	{
+	if (!uFnUpdateSoundSourceAttenuationScaling){
 		uFnUpdateSoundSourceAttenuationScaling = UFunction::FindFunction("Function AkAudio.AkParamGroup.UpdateSoundSourceAttenuationScaling");
 	}
 
@@ -1198,12 +1098,10 @@ void UAkParamGroup::UpdateSoundSourceAttenuationScaling()
 // struct FName                   Key                            (CPF_Parm)
 // class AActor*                  Value                          (CPF_Parm)
 
-void UAkParamGroup::SetActorParameter(struct FName Key, class AActor* Value)
-{
+void UAkParamGroup::SetActorParameter(struct FName Key, class AActor* Value){
 	static UFunction* uFnSetActorParameter = nullptr;
 
-	if (!uFnSetActorParameter)
-	{
+	if (!uFnSetActorParameter){
 		uFnSetActorParameter = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetActorParameter");
 	}
 
@@ -1223,12 +1121,10 @@ void UAkParamGroup::SetActorParameter(struct FName Key, class AActor* Value)
 // struct FName                   Key                            (CPF_Parm)
 // struct FLinearColor            Value                          (CPF_Parm)
 
-void UAkParamGroup::SetLinearColorParameter(struct FName Key, struct FLinearColor Value)
-{
+void UAkParamGroup::SetLinearColorParameter(struct FName Key, struct FLinearColor Value){
 	static UFunction* uFnSetLinearColorParameter = nullptr;
 
-	if (!uFnSetLinearColorParameter)
-	{
+	if (!uFnSetLinearColorParameter){
 		uFnSetLinearColorParameter = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetLinearColorParameter");
 	}
 
@@ -1248,12 +1144,10 @@ void UAkParamGroup::SetLinearColorParameter(struct FName Key, struct FLinearColo
 // struct FName                   Key                            (CPF_Parm)
 // struct FVector                 Value                          (CPF_Parm)
 
-void UAkParamGroup::SetVectorParameter(struct FName Key, struct FVector Value)
-{
+void UAkParamGroup::SetVectorParameter(struct FName Key, struct FVector Value){
 	static UFunction* uFnSetVectorParameter = nullptr;
 
-	if (!uFnSetVectorParameter)
-	{
+	if (!uFnSetVectorParameter){
 		uFnSetVectorParameter = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetVectorParameter");
 	}
 
@@ -1273,12 +1167,10 @@ void UAkParamGroup::SetVectorParameter(struct FName Key, struct FVector Value)
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
 
-void UAkParamGroup::SetFloatParameter(struct FName Key, float Value)
-{
+void UAkParamGroup::SetFloatParameter(struct FName Key, float Value){
 	static UFunction* uFnSetFloatParameter = nullptr;
 
-	if (!uFnSetFloatParameter)
-	{
+	if (!uFnSetFloatParameter){
 		uFnSetFloatParameter = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetFloatParameter");
 	}
 
@@ -1298,12 +1190,10 @@ void UAkParamGroup::SetFloatParameter(struct FName Key, float Value)
 // struct FName                   Key                            (CPF_Parm)
 // struct FName                   Value                          (CPF_Parm)
 
-void UAkParamGroup::SetNameParameter(struct FName Key, struct FName Value)
-{
+void UAkParamGroup::SetNameParameter(struct FName Key, struct FName Value){
 	static UFunction* uFnSetNameParameter = nullptr;
 
-	if (!uFnSetNameParameter)
-	{
+	if (!uFnSetNameParameter){
 		uFnSetNameParameter = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetNameParameter");
 	}
 
@@ -1325,12 +1215,10 @@ void UAkParamGroup::SetNameParameter(struct FName Key, struct FName Value)
 // TArray<struct FName>           SwitchKeys                     (CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 // TArray<struct FName>           SwitchValues                   (CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-void UAkParamGroup::GetDebugData(TArray<struct FName>& RTCPKeys, TArray<float>& RTCPValues, TArray<struct FName>& SwitchKeys, TArray<struct FName>& SwitchValues)
-{
+void UAkParamGroup::GetDebugData(TArray<struct FName>& RTCPKeys, TArray<float>& RTCPValues, TArray<struct FName>& SwitchKeys, TArray<struct FName>& SwitchValues){
 	static UFunction* uFnGetDebugData = nullptr;
 
-	if (!uFnGetDebugData)
-	{
+	if (!uFnGetDebugData){
 		uFnGetDebugData = UFunction::FindFunction("Function AkAudio.AkParamGroup.GetDebugData");
 	}
 
@@ -1356,12 +1244,10 @@ void UAkParamGroup::GetDebugData(TArray<struct FName>& RTCPKeys, TArray<float>& 
 // Parameter Info:
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-void UAkParamGroup::StopSound(class UAkSoundCue* Sound)
-{
+void UAkParamGroup::StopSound(class UAkSoundCue* Sound){
 	static UFunction* uFnStopSound = nullptr;
 
-	if (!uFnStopSound)
-	{
+	if (!uFnStopSound){
 		uFnStopSound = UFunction::FindFunction("Function AkAudio.AkParamGroup.StopSound");
 	}
 
@@ -1382,12 +1268,10 @@ void UAkParamGroup::StopSound(class UAkSoundCue* Sound)
 // struct FVector                 Translation                    (CPF_OptionalParm | CPF_Parm)
 // struct FRotator                Rotation                       (CPF_OptionalParm | CPF_Parm)
 
-class UAkSoundSource* UAkParamGroup::PlaySound(class UAkSoundCue* Sound, struct FVector Translation, struct FRotator Rotation)
-{
+class UAkSoundSource* UAkParamGroup::PlaySound(class UAkSoundCue* Sound, struct FVector Translation, struct FRotator Rotation){
 	static UFunction* uFnPlaySound = nullptr;
 
-	if (!uFnPlaySound)
-	{
+	if (!uFnPlaySound){
 		uFnPlaySound = UFunction::FindFunction("Function AkAudio.AkParamGroup.PlaySound");
 	}
 
@@ -1410,12 +1294,10 @@ class UAkSoundSource* UAkParamGroup::PlaySound(class UAkSoundCue* Sound, struct 
 // struct FName                   Key                            (CPF_Parm)
 // struct FName                   Value                          (CPF_Parm)
 
-void UAkParamGroup::SetSwitch(struct FName Key, struct FName Value)
-{
+void UAkParamGroup::SetSwitch(struct FName Key, struct FName Value){
 	static UFunction* uFnSetSwitch = nullptr;
 
-	if (!uFnSetSwitch)
-	{
+	if (!uFnSetSwitch){
 		uFnSetSwitch = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetSwitch");
 	}
 
@@ -1435,12 +1317,10 @@ void UAkParamGroup::SetSwitch(struct FName Key, struct FName Value)
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
 
-void UAkParamGroup::SetRTCP(struct FName Key, float Value)
-{
+void UAkParamGroup::SetRTCP(struct FName Key, float Value){
 	static UFunction* uFnSetRTCP = nullptr;
 
-	if (!uFnSetRTCP)
-	{
+	if (!uFnSetRTCP){
 		uFnSetRTCP = UFunction::FindFunction("Function AkAudio.AkParamGroup.SetRTCP");
 	}
 
@@ -1460,12 +1340,10 @@ void UAkParamGroup::SetRTCP(struct FName Key, float Value)
 // struct FName                   Key                            (CPF_Parm)
 // class AActor*                  Value                          (CPF_Parm)
 
-void UAkPlaySoundComponent::SetActorParameter(struct FName Key, class AActor* Value)
-{
+void UAkPlaySoundComponent::SetActorParameter(struct FName Key, class AActor* Value){
 	static UFunction* uFnSetActorParameter = nullptr;
 
-	if (!uFnSetActorParameter)
-	{
+	if (!uFnSetActorParameter){
 		uFnSetActorParameter = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.SetActorParameter");
 	}
 
@@ -1485,12 +1363,10 @@ void UAkPlaySoundComponent::SetActorParameter(struct FName Key, class AActor* Va
 // struct FName                   Key                            (CPF_Parm)
 // struct FLinearColor            Value                          (CPF_Parm)
 
-void UAkPlaySoundComponent::SetLinearColorParameter(struct FName Key, struct FLinearColor Value)
-{
+void UAkPlaySoundComponent::SetLinearColorParameter(struct FName Key, struct FLinearColor Value){
 	static UFunction* uFnSetLinearColorParameter = nullptr;
 
-	if (!uFnSetLinearColorParameter)
-	{
+	if (!uFnSetLinearColorParameter){
 		uFnSetLinearColorParameter = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.SetLinearColorParameter");
 	}
 
@@ -1510,12 +1386,10 @@ void UAkPlaySoundComponent::SetLinearColorParameter(struct FName Key, struct FLi
 // struct FName                   Key                            (CPF_Parm)
 // struct FVector                 Value                          (CPF_Parm)
 
-void UAkPlaySoundComponent::SetVectorParameter(struct FName Key, struct FVector Value)
-{
+void UAkPlaySoundComponent::SetVectorParameter(struct FName Key, struct FVector Value){
 	static UFunction* uFnSetVectorParameter = nullptr;
 
-	if (!uFnSetVectorParameter)
-	{
+	if (!uFnSetVectorParameter){
 		uFnSetVectorParameter = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.SetVectorParameter");
 	}
 
@@ -1535,12 +1409,10 @@ void UAkPlaySoundComponent::SetVectorParameter(struct FName Key, struct FVector 
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
 
-void UAkPlaySoundComponent::SetFloatParameter(struct FName Key, float Value)
-{
+void UAkPlaySoundComponent::SetFloatParameter(struct FName Key, float Value){
 	static UFunction* uFnSetFloatParameter = nullptr;
 
-	if (!uFnSetFloatParameter)
-	{
+	if (!uFnSetFloatParameter){
 		uFnSetFloatParameter = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.SetFloatParameter");
 	}
 
@@ -1560,12 +1432,10 @@ void UAkPlaySoundComponent::SetFloatParameter(struct FName Key, float Value)
 // struct FName                   Key                            (CPF_Parm)
 // struct FName                   Value                          (CPF_Parm)
 
-void UAkPlaySoundComponent::SetNameParameter(struct FName Key, struct FName Value)
-{
+void UAkPlaySoundComponent::SetNameParameter(struct FName Key, struct FName Value){
 	static UFunction* uFnSetNameParameter = nullptr;
 
-	if (!uFnSetNameParameter)
-	{
+	if (!uFnSetNameParameter){
 		uFnSetNameParameter = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.SetNameParameter");
 	}
 
@@ -1585,12 +1455,10 @@ void UAkPlaySoundComponent::SetNameParameter(struct FName Key, struct FName Valu
 // struct FName                   Key                            (CPF_Parm)
 // float                          Value                          (CPF_Parm)
 
-void UAkPlaySoundComponent::SetRTCP(struct FName Key, float Value)
-{
+void UAkPlaySoundComponent::SetRTCP(struct FName Key, float Value){
 	static UFunction* uFnSetRTCP = nullptr;
 
-	if (!uFnSetRTCP)
-	{
+	if (!uFnSetRTCP){
 		uFnSetRTCP = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.SetRTCP");
 	}
 
@@ -1610,12 +1478,10 @@ void UAkPlaySoundComponent::SetRTCP(struct FName Key, float Value)
 // struct FName                   Key                            (CPF_Parm)
 // struct FName                   Value                          (CPF_Parm)
 
-void UAkPlaySoundComponent::SetSwitch(struct FName Key, struct FName Value)
-{
+void UAkPlaySoundComponent::SetSwitch(struct FName Key, struct FName Value){
 	static UFunction* uFnSetSwitch = nullptr;
 
-	if (!uFnSetSwitch)
-	{
+	if (!uFnSetSwitch){
 		uFnSetSwitch = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.SetSwitch");
 	}
 
@@ -1634,12 +1500,10 @@ void UAkPlaySoundComponent::SetSwitch(struct FName Key, struct FName Value)
 // Parameter Info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
-bool UAkPlaySoundComponent::IsPlaying()
-{
+bool UAkPlaySoundComponent::IsPlaying(){
 	static UFunction* uFnIsPlaying = nullptr;
 
-	if (!uFnIsPlaying)
-	{
+	if (!uFnIsPlaying){
 		uFnIsPlaying = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.IsPlaying");
 	}
 
@@ -1657,12 +1521,10 @@ bool UAkPlaySoundComponent::IsPlaying()
 // [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkPlaySoundComponent::Stop()
-{
+void UAkPlaySoundComponent::Stop(){
 	static UFunction* uFnStop = nullptr;
 
-	if (!uFnStop)
-	{
+	if (!uFnStop){
 		uFnStop = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.Stop");
 	}
 
@@ -1678,12 +1540,10 @@ void UAkPlaySoundComponent::Stop()
 // [0x00020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkPlaySoundComponent::Play()
-{
+void UAkPlaySoundComponent::Play(){
 	static UFunction* uFnPlay = nullptr;
 
-	if (!uFnPlay)
-	{
+	if (!uFnPlay){
 		uFnPlay = UFunction::FindFunction("Function AkAudio.AkPlaySoundComponent.Play");
 	}
 
@@ -1700,12 +1560,10 @@ void UAkPlaySoundComponent::Play()
 // Parameter Info:
 // class UDebugDrawer*            Drawer                         (CPF_Parm)
 
-void UAkRevPhysicsSimulation::PrintDebugInfo(class UDebugDrawer* Drawer)
-{
+void UAkRevPhysicsSimulation::PrintDebugInfo(class UDebugDrawer* Drawer){
 	static UFunction* uFnPrintDebugInfo = nullptr;
 
-	if (!uFnPrintDebugInfo)
-	{
+	if (!uFnPrintDebugInfo){
 		uFnPrintDebugInfo = UFunction::FindFunction("Function AkAudio.AkRevPhysicsSimulation.PrintDebugInfo");
 	}
 
@@ -1723,12 +1581,10 @@ void UAkRevPhysicsSimulation::PrintDebugInfo(class UDebugDrawer* Drawer)
 // int32_t                        Gear                           (CPF_Parm)
 // struct FAkRevSimUpdateParams   SimUpdate                      (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-float UAkRevPhysicsSimulation::InterpGearRatio(int32_t Gear, struct FAkRevSimUpdateParams& SimUpdate)
-{
+float UAkRevPhysicsSimulation::InterpGearRatio(int32_t Gear, struct FAkRevSimUpdateParams& SimUpdate){
 	static UFunction* uFnInterpGearRatio = nullptr;
 
-	if (!uFnInterpGearRatio)
-	{
+	if (!uFnInterpGearRatio){
 		uFnInterpGearRatio = UFunction::FindFunction("Function AkAudio.AkRevPhysicsSimulation.InterpGearRatio");
 	}
 
@@ -1752,12 +1608,10 @@ float UAkRevPhysicsSimulation::InterpGearRatio(int32_t Gear, struct FAkRevSimUpd
 // float                          ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // struct FAkRevSimUpdateParams   SimUpdate                      (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-float UAkRevPhysicsSimulation::GetGearRatio(struct FAkRevSimUpdateParams& SimUpdate)
-{
+float UAkRevPhysicsSimulation::GetGearRatio(struct FAkRevSimUpdateParams& SimUpdate){
 	static UFunction* uFnGetGearRatio = nullptr;
 
-	if (!uFnGetGearRatio)
-	{
+	if (!uFnGetGearRatio){
 		uFnGetGearRatio = UFunction::FindFunction("Function AkAudio.AkRevPhysicsSimulation.GetGearRatio");
 	}
 
@@ -1781,12 +1635,10 @@ float UAkRevPhysicsSimulation::GetGearRatio(struct FAkRevSimUpdateParams& SimUpd
 // float                          GearRatio                      (CPF_Parm)
 // float                          RPM                            (CPF_Parm)
 
-float UAkRevPhysicsSimulation::CalcVelocity(float GearRatio, float RPM)
-{
+float UAkRevPhysicsSimulation::CalcVelocity(float GearRatio, float RPM){
 	static UFunction* uFnCalcVelocity = nullptr;
 
-	if (!uFnCalcVelocity)
-	{
+	if (!uFnCalcVelocity){
 		uFnCalcVelocity = UFunction::FindFunction("Function AkAudio.AkRevPhysicsSimulation.CalcVelocity");
 	}
 
@@ -1809,12 +1661,10 @@ float UAkRevPhysicsSimulation::CalcVelocity(float GearRatio, float RPM)
 // float                          GearRatio                      (CPF_Parm)
 // float                          Velocity                       (CPF_Parm)
 
-float UAkRevPhysicsSimulation::CalcRPM(float GearRatio, float Velocity)
-{
+float UAkRevPhysicsSimulation::CalcRPM(float GearRatio, float Velocity){
 	static UFunction* uFnCalcRPM = nullptr;
 
-	if (!uFnCalcRPM)
-	{
+	if (!uFnCalcRPM){
 		uFnCalcRPM = UFunction::FindFunction("Function AkAudio.AkRevPhysicsSimulation.CalcRPM");
 	}
 
@@ -1837,12 +1687,10 @@ float UAkRevPhysicsSimulation::CalcRPM(float GearRatio, float Velocity)
 // float                          DeltaTime                      (CPF_Parm)
 // struct FAkRevSimUpdateParams   Params                         (CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink)
 
-struct FAkRevSimFrame UAkRevPhysicsSimulation::Step(float DeltaTime, struct FAkRevSimUpdateParams& Params)
-{
+struct FAkRevSimFrame UAkRevPhysicsSimulation::Step(float DeltaTime, struct FAkRevSimUpdateParams& Params){
 	static UFunction* uFnStep = nullptr;
 
-	if (!uFnStep)
-	{
+	if (!uFnStep){
 		uFnStep = UFunction::FindFunction("Function AkAudio.AkRevPhysicsSimulation.Step");
 	}
 
@@ -1865,12 +1713,10 @@ struct FAkRevSimFrame UAkRevPhysicsSimulation::Step(float DeltaTime, struct FAkR
 // Parameter Info:
 // class UAkRevPhysicsSimulation* Simulation                     (CPF_Parm)
 
-void UAkRevPhysicsSimulation::EventGearChange(class UAkRevPhysicsSimulation* Simulation)
-{
+void UAkRevPhysicsSimulation::EventGearChange(class UAkRevPhysicsSimulation* Simulation){
 	static UFunction* uFnEventGearChange = nullptr;
 
-	if (!uFnEventGearChange)
-	{
+	if (!uFnEventGearChange){
 		uFnEventGearChange = UFunction::FindFunction("Function AkAudio.AkRevPhysicsSimulation.EventGearChange");
 	}
 
@@ -1887,12 +1733,10 @@ void UAkRevPhysicsSimulation::EventGearChange(class UAkRevPhysicsSimulation* Sim
 // class UAkSoundBanksInfo*       ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class FString                  Text                           (CPF_Parm | CPF_NeedCtorLink)
 
-class UAkSoundBanksInfo* UAkSoundBanksInfo::Parse(class FString Text)
-{
+class UAkSoundBanksInfo* UAkSoundBanksInfo::Parse(class FString Text){
 	static UFunction* uFnParse = nullptr;
 
-	if (!uFnParse)
-	{
+	if (!uFnParse){
 		uFnParse = UFunction::FindFunction("Function AkAudio.AkSoundBanksInfo.Parse");
 	}
 
@@ -1912,12 +1756,10 @@ class UAkSoundBanksInfo* UAkSoundBanksInfo::Parse(class FString Text)
 // Parameter Info:
 // class UAkSoundBanksInfo*       ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
-class UAkSoundBanksInfo* UAkSoundBanksInfo::LoadForNativePlatform()
-{
+class UAkSoundBanksInfo* UAkSoundBanksInfo::LoadForNativePlatform(){
 	static UFunction* uFnLoadForNativePlatform = nullptr;
 
-	if (!uFnLoadForNativePlatform)
-	{
+	if (!uFnLoadForNativePlatform){
 		uFnLoadForNativePlatform = UFunction::FindFunction("Function AkAudio.AkSoundBanksInfo.LoadForNativePlatform");
 	}
 
@@ -1936,12 +1778,10 @@ class UAkSoundBanksInfo* UAkSoundBanksInfo::LoadForNativePlatform()
 // Parameter Info:
 // bool                           bValue                         (CPF_Parm)
 
-void UAkSoundSource::eventSetSubtitlesEnabled(bool bValue)
-{
+void UAkSoundSource::eventSetSubtitlesEnabled(bool bValue){
 	static UFunction* uFnSetSubtitlesEnabled = nullptr;
 
-	if (!uFnSetSubtitlesEnabled)
-	{
+	if (!uFnSetSubtitlesEnabled){
 		uFnSetSubtitlesEnabled = UFunction::FindFunction("Function AkAudio.AkSoundSource.SetSubtitlesEnabled");
 	}
 
@@ -1957,12 +1797,10 @@ void UAkSoundSource::eventSetSubtitlesEnabled(bool bValue)
 // Parameter Info:
 // EAttenuationType               AttenuationType                (CPF_Parm)
 
-void UAkSoundSource::SetAttenuationScaling(EAttenuationType AttenuationType)
-{
+void UAkSoundSource::SetAttenuationScaling(EAttenuationType AttenuationType){
 	static UFunction* uFnSetAttenuationScaling = nullptr;
 
-	if (!uFnSetAttenuationScaling)
-	{
+	if (!uFnSetAttenuationScaling){
 		uFnSetAttenuationScaling = UFunction::FindFunction("Function AkAudio.AkSoundSource.SetAttenuationScaling");
 	}
 
@@ -1979,12 +1817,10 @@ void UAkSoundSource::SetAttenuationScaling(EAttenuationType AttenuationType)
 // [0x04020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkSoundSource::ForceUpdatePosition()
-{
+void UAkSoundSource::ForceUpdatePosition(){
 	static UFunction* uFnForceUpdatePosition = nullptr;
 
-	if (!uFnForceUpdatePosition)
-	{
+	if (!uFnForceUpdatePosition){
 		uFnForceUpdatePosition = UFunction::FindFunction("Function AkAudio.AkSoundSource.ForceUpdatePosition");
 	}
 
@@ -2002,12 +1838,10 @@ void UAkSoundSource::ForceUpdatePosition()
 // struct FName                   BusName                        (CPF_Parm)
 // EBusEmitterType                BusType                        (CPF_Parm)
 
-void UAkSoundSource::RegisterReflectionEmitter(struct FName BusName, EBusEmitterType BusType)
-{
+void UAkSoundSource::RegisterReflectionEmitter(struct FName BusName, EBusEmitterType BusType){
 	static UFunction* uFnRegisterReflectionEmitter = nullptr;
 
-	if (!uFnRegisterReflectionEmitter)
-	{
+	if (!uFnRegisterReflectionEmitter){
 		uFnRegisterReflectionEmitter = UFunction::FindFunction("Function AkAudio.AkSoundSource.RegisterReflectionEmitter");
 	}
 
@@ -2026,12 +1860,10 @@ void UAkSoundSource::RegisterReflectionEmitter(struct FName BusName, EBusEmitter
 // Parameter Info:
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 
-bool UAkSoundSource::IsPlayingAny()
-{
+bool UAkSoundSource::IsPlayingAny(){
 	static UFunction* uFnIsPlayingAny = nullptr;
 
-	if (!uFnIsPlayingAny)
-	{
+	if (!uFnIsPlayingAny){
 		uFnIsPlayingAny = UFunction::FindFunction("Function AkAudio.AkSoundSource.IsPlayingAny");
 	}
 
@@ -2051,12 +1883,10 @@ bool UAkSoundSource::IsPlayingAny()
 // bool                           ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-bool UAkSoundSource::IsPlaying(class UAkSoundCue* Sound)
-{
+bool UAkSoundSource::IsPlaying(class UAkSoundCue* Sound){
 	static UFunction* uFnIsPlaying = nullptr;
 
-	if (!uFnIsPlaying)
-	{
+	if (!uFnIsPlaying){
 		uFnIsPlaying = UFunction::FindFunction("Function AkAudio.AkSoundSource.IsPlaying");
 	}
 
@@ -2077,12 +1907,10 @@ bool UAkSoundSource::IsPlaying(class UAkSoundCue* Sound)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 // float                          SeekSeconds                    (CPF_Parm)
 
-void UAkSoundSource::Seek(class UAkSoundCue* Sound, float SeekSeconds)
-{
+void UAkSoundSource::Seek(class UAkSoundCue* Sound, float SeekSeconds){
 	static UFunction* uFnSeek = nullptr;
 
-	if (!uFnSeek)
-	{
+	if (!uFnSeek){
 		uFnSeek = UFunction::FindFunction("Function AkAudio.AkSoundSource.Seek");
 	}
 
@@ -2100,12 +1928,10 @@ void UAkSoundSource::Seek(class UAkSoundCue* Sound, float SeekSeconds)
 // [0x04020401] (FUNC_Final | FUNC_Native | FUNC_Public | FUNC_K2Call | FUNC_AllFlags)
 // Parameter Info:
 
-void UAkSoundSource::StopAll()
-{
+void UAkSoundSource::StopAll(){
 	static UFunction* uFnStopAll = nullptr;
 
-	if (!uFnStopAll)
-	{
+	if (!uFnStopAll){
 		uFnStopAll = UFunction::FindFunction("Function AkAudio.AkSoundSource.StopAll");
 	}
 
@@ -2122,12 +1948,10 @@ void UAkSoundSource::StopAll()
 // Parameter Info:
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-void UAkSoundSource::Stop(class UAkSoundCue* Sound)
-{
+void UAkSoundSource::Stop(class UAkSoundCue* Sound){
 	static UFunction* uFnStop = nullptr;
 
-	if (!uFnStop)
-	{
+	if (!uFnStop){
 		uFnStop = UFunction::FindFunction("Function AkAudio.AkSoundSource.Stop");
 	}
 
@@ -2146,12 +1970,10 @@ void UAkSoundSource::Stop(class UAkSoundCue* Sound)
 // int32_t                        ReturnValue                    (CPF_Parm | CPF_OutParm | CPF_ReturnParm)
 // class UAkSoundCue*             Sound                          (CPF_Parm)
 
-int32_t UAkSoundSource::Play(class UAkSoundCue* Sound)
-{
+int32_t UAkSoundSource::Play(class UAkSoundCue* Sound){
 	static UFunction* uFnPlay = nullptr;
 
-	if (!uFnPlay)
-	{
+	if (!uFnPlay){
 		uFnPlay = UFunction::FindFunction("Function AkAudio.AkSoundSource.Play");
 	}
 
@@ -2173,12 +1995,10 @@ int32_t UAkSoundSource::Play(class UAkSoundCue* Sound)
 // int32_t                        PlayingID                      (CPF_Parm)
 // float                          DurationMS                     (CPF_Parm)
 
-void UAkSoundSource::EventDuration(class UAkSoundSource* Source, int32_t PlayingID, float DurationMS)
-{
+void UAkSoundSource::EventDuration(class UAkSoundSource* Source, int32_t PlayingID, float DurationMS){
 	static UFunction* uFnEventDuration = nullptr;
 
-	if (!uFnEventDuration)
-	{
+	if (!uFnEventDuration){
 		uFnEventDuration = UFunction::FindFunction("Function AkAudio.AkSoundSource.EventDuration");
 	}
 
@@ -2198,12 +2018,10 @@ void UAkSoundSource::EventDuration(class UAkSoundSource* Source, int32_t Playing
 // int32_t                        PlayingID                      (CPF_Parm)
 // class FString                  Marker                         (CPF_Parm | CPF_NeedCtorLink)
 
-void UAkSoundSource::EventMarker(class UAkSoundSource* Source, int32_t PlayingID, class FString Marker)
-{
+void UAkSoundSource::EventMarker(class UAkSoundSource* Source, int32_t PlayingID, class FString Marker){
 	static UFunction* uFnEventMarker = nullptr;
 
-	if (!uFnEventMarker)
-	{
+	if (!uFnEventMarker){
 		uFnEventMarker = UFunction::FindFunction("Function AkAudio.AkSoundSource.EventMarker");
 	}
 
@@ -2222,12 +2040,10 @@ void UAkSoundSource::EventMarker(class UAkSoundSource* Source, int32_t PlayingID
 // class UAkSoundSource*          Source                         (CPF_Parm | CPF_EditInline)
 // int32_t                        PlayingID                      (CPF_Parm)
 
-void UAkSoundSource::EventFinished(class UAkSoundSource* Source, int32_t PlayingID)
-{
+void UAkSoundSource::EventFinished(class UAkSoundSource* Source, int32_t PlayingID){
 	static UFunction* uFnEventFinished = nullptr;
 
-	if (!uFnEventFinished)
-	{
+	if (!uFnEventFinished){
 		uFnEventFinished = UFunction::FindFunction("Function AkAudio.AkSoundSource.EventFinished");
 	}
 
@@ -2244,12 +2060,10 @@ void UAkSoundSource::EventFinished(class UAkSoundSource* Source, int32_t Playing
 // Parameter Info:
 // class FString                  CueName                        (CPF_Parm | CPF_NeedCtorLink)
 
-void USeqAct_AkPlayMusicWithCues::eventTriggerEvents(class FString CueName)
-{
+void USeqAct_AkPlayMusicWithCues::eventTriggerEvents(class FString CueName){
 	static UFunction* uFnTriggerEvents = nullptr;
 
-	if (!uFnTriggerEvents)
-	{
+	if (!uFnTriggerEvents){
 		uFnTriggerEvents = UFunction::FindFunction("Function AkAudio.SeqAct_AkPlayMusicWithCues.TriggerEvents");
 	}
 
@@ -2266,12 +2080,10 @@ void USeqAct_AkPlayMusicWithCues::eventTriggerEvents(class FString CueName)
 // class AActor*                  A                              (CPF_Parm)
 // bool                           bPlay                          (CPF_Parm)
 
-void USeqAct_AkPlaySound::ToggleSoundFor(class AActor* A, bool bPlay)
-{
+void USeqAct_AkPlaySound::ToggleSoundFor(class AActor* A, bool bPlay){
 	static UFunction* uFnToggleSoundFor = nullptr;
 
-	if (!uFnToggleSoundFor)
-	{
+	if (!uFnToggleSoundFor){
 		uFnToggleSoundFor = UFunction::FindFunction("Function AkAudio.SeqAct_AkPlaySound.ToggleSoundFor");
 	}
 
@@ -2288,12 +2100,10 @@ void USeqAct_AkPlaySound::ToggleSoundFor(class AActor* A, bool bPlay)
 // Parameter Info:
 // bool                           bPlay                          (CPF_Parm)
 
-void USeqAct_AkPlaySound::ToggleSound(bool bPlay)
-{
+void USeqAct_AkPlaySound::ToggleSound(bool bPlay){
 	static UFunction* uFnToggleSound = nullptr;
 
-	if (!uFnToggleSound)
-	{
+	if (!uFnToggleSound){
 		uFnToggleSound = UFunction::FindFunction("Function AkAudio.SeqAct_AkPlaySound.ToggleSound");
 	}
 
@@ -2308,12 +2118,10 @@ void USeqAct_AkPlaySound::ToggleSound(bool bPlay)
 // [0x400020802] (FUNC_Defined | FUNC_Event | FUNC_Public | FUNC_NetValidate | FUNC_AllFlags)
 // Parameter Info:
 
-void USeqAct_AkPlaySound::eventActivated()
-{
+void USeqAct_AkPlaySound::eventActivated(){
 	static UFunction* uFnActivated = nullptr;
 
-	if (!uFnActivated)
-	{
+	if (!uFnActivated){
 		uFnActivated = UFunction::FindFunction("Function AkAudio.SeqAct_AkPlaySound.Activated");
 	}
 
@@ -2329,12 +2137,10 @@ void USeqAct_AkPlaySound::eventActivated()
 // class UAkSoundSource*          Source                         (CPF_Parm | CPF_EditInline)
 // int32_t                        PlayingID                      (CPF_Parm)
 
-void USeqAct_AkPostEvent::eventHandleSoundCueFinished(class UAkSoundSource* Source, int32_t PlayingID)
-{
+void USeqAct_AkPostEvent::eventHandleSoundCueFinished(class UAkSoundSource* Source, int32_t PlayingID){
 	static UFunction* uFnHandleSoundCueFinished = nullptr;
 
-	if (!uFnHandleSoundCueFinished)
-	{
+	if (!uFnHandleSoundCueFinished){
 		uFnHandleSoundCueFinished = UFunction::FindFunction("Function AkAudio.SeqAct_AkPostEvent.HandleSoundCueFinished");
 	}
 
@@ -2353,12 +2159,10 @@ void USeqAct_AkPostEvent::eventHandleSoundCueFinished(class UAkSoundSource* Sour
 // Parameter Info:
 // class USeqAct_Toggle*          Action                         (CPF_Parm)
 
-void AAkAmbientSoundActor::OnToggle(class USeqAct_Toggle* Action)
-{
+void AAkAmbientSoundActor::OnToggle(class USeqAct_Toggle* Action){
 	static UFunction* uFnOnToggle = nullptr;
 
-	if (!uFnOnToggle)
-	{
+	if (!uFnOnToggle){
 		uFnOnToggle = UFunction::FindFunction("Function AkAudio.AkAmbientSoundActor.OnToggle");
 	}
 
@@ -2375,12 +2179,10 @@ void AAkAmbientSoundActor::OnToggle(class USeqAct_Toggle* Action)
 // class AActor*                  A                              (CPF_Parm)
 // bool                           bPlay                          (CPF_Parm)
 
-void USeqAct_AkPlaySoundAndSeek::ToggleSoundFor(class AActor* A, bool bPlay)
-{
+void USeqAct_AkPlaySoundAndSeek::ToggleSoundFor(class AActor* A, bool bPlay){
 	static UFunction* uFnToggleSoundFor = nullptr;
 
-	if (!uFnToggleSoundFor)
-	{
+	if (!uFnToggleSoundFor){
 		uFnToggleSoundFor = UFunction::FindFunction("Function AkAudio.SeqAct_AkPlaySoundAndSeek.ToggleSoundFor");
 	}
 
@@ -2397,12 +2199,10 @@ void USeqAct_AkPlaySoundAndSeek::ToggleSoundFor(class AActor* A, bool bPlay)
 // Parameter Info:
 // bool                           bPlay                          (CPF_Parm)
 
-void USeqAct_AkPlaySoundAndSeek::ToggleSound(bool bPlay)
-{
+void USeqAct_AkPlaySoundAndSeek::ToggleSound(bool bPlay){
 	static UFunction* uFnToggleSound = nullptr;
 
-	if (!uFnToggleSound)
-	{
+	if (!uFnToggleSound){
 		uFnToggleSound = UFunction::FindFunction("Function AkAudio.SeqAct_AkPlaySoundAndSeek.ToggleSound");
 	}
 
@@ -2417,12 +2217,10 @@ void USeqAct_AkPlaySoundAndSeek::ToggleSound(bool bPlay)
 // [0x400020802] (FUNC_Defined | FUNC_Event | FUNC_Public | FUNC_NetValidate | FUNC_AllFlags)
 // Parameter Info:
 
-void USeqAct_AkPlaySoundAndSeek::eventActivated()
-{
+void USeqAct_AkPlaySoundAndSeek::eventActivated(){
 	static UFunction* uFnActivated = nullptr;
 
-	if (!uFnActivated)
-	{
+	if (!uFnActivated){
 		uFnActivated = UFunction::FindFunction("Function AkAudio.SeqAct_AkPlaySoundAndSeek.Activated");
 	}
 
@@ -2439,5 +2237,5 @@ void USeqAct_AkPlaySoundAndSeek::eventActivated()
 */
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif
